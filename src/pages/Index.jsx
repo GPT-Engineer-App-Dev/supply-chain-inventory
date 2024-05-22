@@ -35,12 +35,12 @@ const Index = () => {
     <div className="min-h-screen bg-gray-100 p-8">
       <h1 className="text-4xl font-bold mb-8 text-center">Inventory Management</h1>
       <div className="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
-        <div className="flex mb-4">
-          <input type="text" className="flex-grow p-2 border border-gray-300 rounded-l-lg" placeholder="Item name" value={newItem.name} onChange={(e) => setNewItem({ ...newItem, name: e.target.value })} />
-          <input type="text" className="flex-grow p-2 border border-gray-300 rounded-l-lg" placeholder="Buy price" value={newItem.price} onChange={(e) => setNewItem({ ...newItem, price: e.target.value })} />
-          <input type="text" className="flex-grow p-2 border border-gray-300 rounded-l-lg" placeholder="Quantity" value={newItem.quantity} onChange={(e) => setNewItem({ ...newItem, quantity: e.target.value })} />
-          <input type="date" className="flex-grow p-2 border border-gray-300 rounded-l-lg" placeholder="Date received" value={newItem.date} onChange={(e) => setNewItem({ ...newItem, date: e.target.value })} />
-          <button className="bg-blue-500 text-white p-2 rounded-r-lg" onClick={handleAddItem}>
+        <div className="flex flex-wrap mb-4">
+          <input type="text" className="flex-grow p-2 border border-gray-300 rounded-t-lg" placeholder="Item name" value={newItem.name} onChange={(e) => setNewItem({ ...newItem, name: e.target.value })} />
+          <input type="text" className="flex-grow p-2 border border-gray-300 rounded-t-lg" placeholder="Buy price" value={newItem.price} onChange={(e) => setNewItem({ ...newItem, price: e.target.value })} />
+          <input type="text" className="flex-grow p-2 border border-gray-300 rounded-t-lg" placeholder="Quantity" value={newItem.quantity} onChange={(e) => setNewItem({ ...newItem, quantity: e.target.value })} />
+          <input type="date" className="flex-grow p-2 border border-gray-300 rounded-t-lg" value={newItem.date} onChange={(e) => setNewItem({ ...newItem, date: e.target.value })} />
+          <button className="bg-blue-500 text-white p-2 rounded-b-lg" onClick={handleAddItem}>
             <FaPlus />
           </button>
         </div>
